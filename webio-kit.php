@@ -35,9 +35,10 @@ class Webio_Banner_Anti_Spam_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-		echo '<div>';
-		echo '<a href="https://codecanyon.net/item/antispam-pro/6491169?ref=webvitalii" target="_blank">';
+		echo '<div class="fx-text-center">';
+		echo '<a href="https://codecanyon.net/item/antispam-pro/6491169?ref=webvitalii" target="_blank" title="Stop WordPress Spam">';
 		echo '<img src="'.plugins_url('/img/wordpress-anti-spam.png', __FILE__).'">';
+		echo '<div>Stop WordPress Spam</div>';
 		echo '</a>';
 		echo '<div>';
 		echo $args['after_widget'];
@@ -101,9 +102,10 @@ class Webio_Banner_Speedup_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-		echo '<div>';
-		echo '<a href="https://codecanyon.net/item/silver-bullet-pro/15171769?ref=webvitalii" target="_blank">';
+		echo '<div class="fx-text-center">';
+		echo '<a href="https://codecanyon.net/item/silver-bullet-pro/15171769?ref=webvitalii" target="_blank" title="Speedup WordPress">';
 		echo '<img src="'.plugins_url('/img/wordpress-speedup.png', __FILE__).'">';
+		echo '<div>Speedup WordPress</div>';
 		echo '</a>';
 		echo '<div>';
 		echo $args['after_widget'];
