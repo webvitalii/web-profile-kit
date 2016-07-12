@@ -143,7 +143,7 @@ add_action( 'widgets_init', function(){
 
 
 /**
- * Adds Webio_Banner_Speedup_Widget widget.
+ * Adds Webio_Adsense_Responsive_Widget widget.
  */
 class Webio_Adsense_Responsive_Widget extends WP_Widget {
 
@@ -210,4 +210,83 @@ class Webio_Adsense_Responsive_Widget extends WP_Widget {
 add_action( 'widgets_init', function(){
 	register_widget( 'Webio_Adsense_Responsive_Widget' );
 });
+
+
+/**
+ * Adds Webio_Websites_List_Widget widget.
+ */
+class Webio_Websites_List_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'webio_websites_list_widget', // Base ID
+			'Webio Websites List', // Name
+			array( 'description' => 'Webio Websites List', ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		$site_url = get_bloginfo('url');
+		echo '<ul>';
+		if(strpos($site_url, 'vitalii.webio.ca') === false) {
+			echo '<li><a href="http://vitalii.webio.ca/" target="_blank">Vitalii</a></li>';
+		}
+		echo '<li><a href="http://flexify.webio.ca/" target="_blank">Flexify Frontend Framework</a></li>';
+		if(strpos($site_url, 'web-profile.net') === false) {
+			echo '<li><a href="http://web-profile.net/" target="_blank">Web-Profile</a></li>';
+		}
+		if(strpos($site_url, 'english-francais.webio.ca') === false) {
+			echo '<li><a href="http://english-francais.webio.ca/" target="_blank">English-Francais</a></li>';
+		}
+		if(strpos($site_url, 'digital-flow.webio.ca') === false) {
+			echo '<li><a href="http://digital-flow.webio.ca/" target="_blank">Digital-Flow</a></li>';
+		}
+		
+		echo '</ul>';
+		
+		echo $args['after_widget'];
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+
+} // class Webio_Websites_List_Widget
+
+add_action( 'widgets_init', function(){
+	register_widget( 'Webio_Websites_List_Widget' );
+});
+
 
