@@ -142,3 +142,72 @@ add_action( 'widgets_init', function(){
 });
 
 
+/**
+ * Adds Webio_Banner_Speedup_Widget widget.
+ */
+class Webio_Adsense_Responsive_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'webio_adsense_responsive_widget', // Base ID
+			'Webio Adsense Responsive', // Name
+			array( 'description' => 'Webio Adsense Responsive', ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Universal Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5207574527239705"
+     data-ad-slot="3447834479"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+		echo $args['after_widget'];
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+
+} // class Webio_Adsense_Responsive_Widget
+
+add_action( 'widgets_init', function(){
+	register_widget( 'Webio_Adsense_Responsive_Widget' );
+});
+
