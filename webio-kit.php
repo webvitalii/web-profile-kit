@@ -213,6 +213,144 @@ add_action( 'widgets_init', function(){
 
 
 /**
+ * Adds Webio_Adsense_Block_1_Widget widget.
+ */
+class Webio_Adsense_Block_1_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'webio_adsense_block_1_widget', // Base ID
+			'Webio Adsense Block 1', // Name
+			array( 'description' => 'Webio Adsense Block 1', ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Universal Block 1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5207574527239705"
+     data-ad-slot="9743216872"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+		echo $args['after_widget'];
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+
+} // class Webio_Adsense_Block_1_Widget
+
+add_action( 'widgets_init', function(){
+	register_widget( 'Webio_Adsense_Block_1_Widget' );
+});
+
+
+/**
+ * Adds Webio_Adsense_Block_2_Widget widget.
+ */
+class Webio_Adsense_Block_2_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'webio_adsense_block_2_widget', // Base ID
+			'Webio Adsense Block 2', // Name
+			array( 'description' => 'Webio Adsense Block 2', ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Universal Block 2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5207574527239705"
+     data-ad-slot="3696683271"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+		echo $args['after_widget'];
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+
+} // class Webio_Adsense_Block_2_Widget
+
+add_action( 'widgets_init', function(){
+	register_widget( 'Webio_Adsense_Block_2_Widget' );
+});
+
+
+/**
  * Adds Webio_Websites_List_Widget widget.
  */
 class Webio_Websites_List_Widget extends WP_Widget {
