@@ -1,27 +1,27 @@
 <?php
 /*
-Plugin Name: Webio-Kit
-Plugin URI: http://webio.ca/
-Description: Webio toolkit.
-Version: 1.0
-Author: webvitaly
-Author URI: http://webio.ca/
+Plugin Name: Universio-Kit
+Plugin URI: http://universio.net/
+Description: Universio toolkit.
+Version: 2.0
+Author: webvitalii
+Author URI: http://universio.net/
 License: GPLv3
 */
 
 /**
- * Adds Webio_Banner_Anti_Spam_Widget widget.
+ * Adds Universio_Banner_Anti_Spam_Widget widget.
  */
-class Webio_Banner_Anti_Spam_Widget extends WP_Widget {
+class Universio_Banner_Anti_Spam_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'webio_banner_anti_spam_widget', // Base ID
-			'Webio Banner Anti-Spam', // Name
-			array( 'description' => 'Webio Banner Anti-Spam', ) // Args
+			'Universio_banner_anti_spam_widget', // Base ID
+			'Universio Banner Anti-Spam', // Name
+			array( 'description' => 'Universio Banner Anti-Spam', ) // Args
 		);
 	}
 
@@ -68,27 +68,27 @@ class Webio_Banner_Anti_Spam_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Webio_Banner_Anti_Spam_Widget
+} // class Universio_Banner_Anti_Spam_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Webio_Banner_Anti_Spam_Widget' );
+	register_widget( 'Universio_Banner_Anti_Spam_Widget' );
 });
 
 
 
 /**
- * Adds Webio_Banner_Speedup_Widget widget.
+ * Adds Universio_Banner_Speedup_Widget widget.
  */
-class Webio_Banner_Speedup_Widget extends WP_Widget {
+class Universio_Banner_Speedup_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'webio_banner_speedup_widget', // Base ID
-			'Webio Banner Speedup', // Name
-			array( 'description' => 'Webio Banner Speedup', ) // Args
+			'Universio_banner_speedup_widget', // Base ID
+			'Universio Banner Speedup', // Name
+			array( 'description' => 'Universio Banner Speedup', ) // Args
 		);
 	}
 
@@ -135,26 +135,26 @@ class Webio_Banner_Speedup_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Webio_Banner_Speedup_Widget
+} // class Universio_Banner_Speedup_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Webio_Banner_Speedup_Widget' );
+	register_widget( 'Universio_Banner_Speedup_Widget' );
 });
 
 
 /**
- * Adds Webio_Adsense_Responsive_Widget widget.
+ * Adds Universio_Adsense_Responsive_Widget widget.
  */
-class Webio_Adsense_Responsive_Widget extends WP_Widget {
+class Universio_Adsense_Responsive_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'webio_adsense_responsive_widget', // Base ID
-			'Webio Adsense Responsive', // Name
-			array( 'description' => 'Webio Adsense Responsive', ) // Args
+			'Universio_adsense_responsive_widget', // Base ID
+			'Universio Adsense Responsive', // Name
+			array( 'description' => 'Universio Adsense Responsive', ) // Args
 		);
 	}
 
@@ -205,26 +205,26 @@ class Webio_Adsense_Responsive_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Webio_Adsense_Responsive_Widget
+} // class Universio_Adsense_Responsive_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Webio_Adsense_Responsive_Widget' );
+	register_widget( 'Universio_Adsense_Responsive_Widget' );
 });
 
 
 /**
- * Adds Webio_Adsense_Block_1_Widget widget.
+ * Adds Universio_Adsense_Block_1_Widget widget.
  */
-class Webio_Adsense_Block_1_Widget extends WP_Widget {
+class Universio_Adsense_Block_1_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'webio_adsense_block_1_widget', // Base ID
-			'Webio Adsense Block 1', // Name
-			array( 'description' => 'Webio Adsense Block 1', ) // Args
+			'Universio_adsense_block_1_widget', // Base ID
+			'Universio Adsense Block 1', // Name
+			array( 'description' => 'Universio Adsense Block 1', ) // Args
 		);
 	}
 
@@ -274,26 +274,26 @@ class Webio_Adsense_Block_1_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Webio_Adsense_Block_1_Widget
+} // class Universio_Adsense_Block_1_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Webio_Adsense_Block_1_Widget' );
+	register_widget( 'Universio_Adsense_Block_1_Widget' );
 });
 
 
 /**
- * Adds Webio_Adsense_Block_2_Widget widget.
+ * Adds Universio_Adsense_Block_2_Widget widget.
  */
-class Webio_Adsense_Block_2_Widget extends WP_Widget {
+class Universio_Adsense_Block_2_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'webio_adsense_block_2_widget', // Base ID
-			'Webio Adsense Block 2', // Name
-			array( 'description' => 'Webio Adsense Block 2', ) // Args
+			'Universio_adsense_block_2_widget', // Base ID
+			'Universio Adsense Block 2', // Name
+			array( 'description' => 'Universio Adsense Block 2', ) // Args
 		);
 	}
 
@@ -343,26 +343,26 @@ class Webio_Adsense_Block_2_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Webio_Adsense_Block_2_Widget
+} // class Universio_Adsense_Block_2_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Webio_Adsense_Block_2_Widget' );
+	register_widget( 'Universio_Adsense_Block_2_Widget' );
 });
 
 
 /**
- * Adds Webio_Websites_List_Widget widget.
+ * Adds Universio_Websites_List_Widget widget.
  */
-class Webio_Websites_List_Widget extends WP_Widget {
+class Universio_Websites_List_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'webio_websites_list_widget', // Base ID
-			'Webio Websites List', // Name
-			array( 'description' => 'Webio Websites List', ) // Args
+			'Universio_websites_list_widget', // Base ID
+			'Universio Websites List', // Name
+			array( 'description' => 'Universio Websites List', ) // Args
 		);
 	}
 
@@ -421,10 +421,10 @@ class Webio_Websites_List_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Webio_Websites_List_Widget
+} // class Universio_Websites_List_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Webio_Websites_List_Widget' );
+	register_widget( 'Universio_Websites_List_Widget' );
 });
 
 
