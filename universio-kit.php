@@ -2,12 +2,14 @@
 /*
 Plugin Name: Universio-Kit
 Plugin URI: http://universio.net/
-Description: Universio toolkit.
-Version: 2.0
+Description: Universio toolkit. Plugin banners, adsense blocks, Contact Form 7 optimizations.
+Version: 2.1
 Author: webvitalii
 Author URI: http://universio.net/
 License: GPLv3
 */
+
+include('inc/universio-contact-form-7.php');
 
 /**
  * Adds Universio_Banner_Anti_Spam_Widget widget.
