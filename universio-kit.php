@@ -3,7 +3,7 @@
 Plugin Name: Universio-Kit
 Plugin URI: http://universio.net/
 Description: Universio toolkit. Plugin banners, adsense blocks, Contact Form 7 optimizations.
-Version: 2.1
+Version: 2.2
 Author: webvitalii
 Author URI: http://universio.net/
 License: GPLv3
@@ -380,18 +380,15 @@ class Universio_Websites_List_Widget extends WP_Widget {
 		echo $args['before_widget'];
 		$site_url = get_bloginfo('url');
 		echo '<ul>';
-		if(strpos($site_url, 'vitalii.webio.ca') === false) {
-			echo '<li><a href="http://vitalii.webio.ca/" target="_blank">Vitalii</a></li>';
+		
+		echo '<li><a href="http://universio.net/" target="_blank">Universio Network</a></li>';
+		
+		if(strpos($site_url, 'flexify.universio.net') === false) {
+			echo '<li><a href="http://flexify.universio.net/" target="_blank">Flexify - Vital WoordPress tools</a></li>';
 		}
-		echo '<li><a href="http://flexify.webio.ca/" target="_blank">Flexify Frontend Framework</a></li>';
+		
 		if(strpos($site_url, 'web-profile.net') === false) {
 			echo '<li><a href="http://web-profile.net/" target="_blank">Web-Profile</a></li>';
-		}
-		if(strpos($site_url, 'english-francais.webio.ca') === false) {
-			echo '<li><a href="http://english-francais.webio.ca/" target="_blank">English-Francais</a></li>';
-		}
-		if(strpos($site_url, 'digital-flow.webio.ca') === false) {
-			echo '<li><a href="http://digital-flow.webio.ca/" target="_blank">Digital-Flow</a></li>';
 		}
 		
 		echo '</ul>';
