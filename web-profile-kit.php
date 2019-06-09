@@ -1,28 +1,28 @@
 <?php
 /*
-Plugin Name: Universio-Kit
-Plugin URI: http://universio.net/
-Description: Universio toolkit. Plugin banners, adsense blocks, Contact Form 7 and Newsletter optimizations.
-Version: 2.3
+Plugin Name: Web-profile-kit
+Plugin URI: http://web-profile.net/
+Description: Plugin banners, adsense blocks, Contact Form 7 and Newsletter optimizations.
+Version: 2.4
 Author: webvitalii
-Author URI: http://universio.net/
+Author URI: http://web-profile.net/
 License: GPLv3
 */
 
-include('inc/universio-contact-form-7.php');
-include('inc/universio-newsletter.php');
+include('inc/contact-form-7.php');
+include('inc/newsletter.php');
 
 /**
- * Adds Universio_Banner_Anti_Spam_Widget widget.
+ * Adds Web_Profile_Banner_Anti_Spam_Widget widget.
  */
-class Universio_Banner_Anti_Spam_Widget extends WP_Widget {
+class Web_Profile_Banner_Anti_Spam_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Universio_banner_anti_spam_widget', // Base ID
+			'Web_Profile_banner_anti_spam_widget', // Base ID
 			'Universio Banner Anti-Spam', // Name
 			array( 'description' => 'Universio Banner Anti-Spam', ) // Args
 		);
@@ -71,25 +71,25 @@ class Universio_Banner_Anti_Spam_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Universio_Banner_Anti_Spam_Widget
+} // class Web_Profile_Banner_Anti_Spam_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Universio_Banner_Anti_Spam_Widget' );
+	register_widget( 'Web_Profile_Banner_Anti_Spam_Widget' );
 });
 
 
 
 /**
- * Adds Universio_Banner_Speedup_Widget widget.
+ * Adds Web_Profile_Banner_Speedup_Widget widget.
  */
-class Universio_Banner_Speedup_Widget extends WP_Widget {
+class Web_Profile_Banner_Speedup_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Universio_banner_speedup_widget', // Base ID
+			'Web_Profile_banner_speedup_widget', // Base ID
 			'Universio Banner Speedup', // Name
 			array( 'description' => 'Universio Banner Speedup', ) // Args
 		);
@@ -138,24 +138,24 @@ class Universio_Banner_Speedup_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Universio_Banner_Speedup_Widget
+} // class Web_Profile_Banner_Speedup_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Universio_Banner_Speedup_Widget' );
+	register_widget( 'Web_Profile_Banner_Speedup_Widget' );
 });
 
 
 /**
- * Adds Universio_Adsense_Responsive_Widget widget.
+ * Adds Web_Profile_Adsense_1_Responsive_Widget widget.
  */
-class Universio_Adsense_Responsive_Widget extends WP_Widget {
+class Web_Profile_Adsense_1_Responsive_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Universio_adsense_responsive_widget', // Base ID
+			'Web_Profile_adsense_responsive_widget', // Base ID
 			'Universio Adsense Responsive', // Name
 			array( 'description' => 'Universio Adsense Responsive', ) // Args
 		);
@@ -171,13 +171,14 @@ class Universio_Adsense_Responsive_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-		echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Universal Responsive -->
+		echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad-1 Responsive -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5207574527239705"
-     data-ad-slot="3447834479"
-     data-ad-format="auto"></ins>
+     data-ad-slot="5956433564"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>';
@@ -208,26 +209,98 @@ class Universio_Adsense_Responsive_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Universio_Adsense_Responsive_Widget
+} // class Web_Profile_Adsense_1_Responsive_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Universio_Adsense_Responsive_Widget' );
+	register_widget( 'Web_Profile_Adsense_1_Responsive_Widget' );
 });
 
 
+
 /**
- * Adds Universio_Adsense_Block_1_Widget widget.
+ * Adds Web_Profile_Adsense_2_Responsive_Widget widget.
  */
-class Universio_Adsense_Block_1_Widget extends WP_Widget {
+class Web_Profile_Adsense_2_Responsive_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Universio_adsense_block_1_widget', // Base ID
-			'Universio Adsense Block 1', // Name
-			array( 'description' => 'Universio Adsense Block 1', ) // Args
+			'Web_Profile_adsense_responsive_widget', // Base ID
+			'Universio Adsense Responsive', // Name
+			array( 'description' => 'Universio Adsense Responsive', ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad-2 Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5207574527239705"
+     data-ad-slot="2583276717"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+		echo $args['after_widget'];
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+
+} // class Web_Profile_Adsense_2_Responsive_Widget
+
+add_action( 'widgets_init', function(){
+	register_widget( 'Web_Profile_Adsense_2_Responsive_Widget' );
+});
+
+
+/**
+ * Adds Web_Profile_Adsense_Block_1_Widget widget.
+ */
+class Web_Profile_Adsense_Block_1_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'Web_Profile_adsense_block_1_widget', // Base ID
+			'Web-profile Adsense Block 1', // Name
+			array( 'description' => 'Web-profile Adsense Block 1', ) // Args
 		);
 	}
 
@@ -277,26 +350,26 @@ class Universio_Adsense_Block_1_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Universio_Adsense_Block_1_Widget
+} // class Web_Profile_Adsense_Block_1_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Universio_Adsense_Block_1_Widget' );
+	register_widget( 'Web_Profile_Adsense_Block_1_Widget' );
 });
 
 
 /**
- * Adds Universio_Adsense_Block_2_Widget widget.
+ * Adds Web_Profile_Adsense_Block_2_Widget widget.
  */
-class Universio_Adsense_Block_2_Widget extends WP_Widget {
+class Web_Profile_Adsense_Block_2_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Universio_adsense_block_2_widget', // Base ID
-			'Universio Adsense Block 2', // Name
-			array( 'description' => 'Universio Adsense Block 2', ) // Args
+			'Web_Profile_adsense_block_2_widget', // Base ID
+			'Web-profile Adsense Block 2', // Name
+			array( 'description' => 'Web-profile Adsense Block 2', ) // Args
 		);
 	}
 
@@ -346,24 +419,24 @@ class Universio_Adsense_Block_2_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Universio_Adsense_Block_2_Widget
+} // class Web_Profile_Adsense_Block_2_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Universio_Adsense_Block_2_Widget' );
+	register_widget( 'Web_Profile_Adsense_Block_2_Widget' );
 });
 
 
 /**
- * Adds Universio_Websites_List_Widget widget.
+ * Adds Web_Profile_Websites_List_Widget widget.
  */
-class Universio_Websites_List_Widget extends WP_Widget {
+class Web_Profile_Websites_List_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Universio_websites_list_widget', // Base ID
+			'Web_Profile_websites_list_widget', // Base ID
 			'Universio Websites List', // Name
 			array( 'description' => 'Universio Websites List', ) // Args
 		);
@@ -382,10 +455,8 @@ class Universio_Websites_List_Widget extends WP_Widget {
 		$site_url = get_bloginfo('url');
 		echo '<ul>';
 		
-		echo '<li><a href="http://universio.net/" target="_blank">Universio Network</a></li>';
-		
-		if(strpos($site_url, 'flexify.universio.net') === false) {
-			echo '<li><a href="http://flexify.universio.net/" target="_blank">Flexify - Vital WoordPress tools</a></li>';
+		if(strpos($site_url, 'universio.net') === false) {
+			echo '<li><a href="http://universio.net/" target="_blank">Universio Network</a></li>';
 		}
 		
 		if(strpos($site_url, 'web-profile.net') === false) {
@@ -421,10 +492,10 @@ class Universio_Websites_List_Widget extends WP_Widget {
 		return $new_instance;
 	}
 
-} // class Universio_Websites_List_Widget
+} // class Web_Profile_Websites_List_Widget
 
 add_action( 'widgets_init', function(){
-	register_widget( 'Universio_Websites_List_Widget' );
+	register_widget( 'Web_Profile_Websites_List_Widget' );
 });
 
 
